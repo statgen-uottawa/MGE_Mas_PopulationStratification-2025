@@ -1,2 +1,6 @@
 # MGE_Mas_PopulationStratification-2025
 Code for the manuscript "An evaluation of statistical approaches to detect maternal gene-environment effects under violation of the mating symmetry and population homogeneity assumptions"
+
+The directories NoPopStrat_MSHWE, NoPopStrat_MaS, PopStrat_MSHWE, PopStrat_MaS contain the R scripts for the four main simulation scenarios. Each of these directories contains 3-4 scripts, one for the initial analysis, one for a re-analysis with higher reps and lower effect sizes ("HigReps_LowerEffects" in the filename), and one or two for re-doing a subset of the analysis when there was a runtime failure of a small number of the simulation settings ("restart" in the file name).
+
+Each of these scripts call either simulate_data_functions_V3.R and run_analysis_functions_V3.R or run_analysis_functions_V4.R, which are the general R scripts for simulating the data and analysing the data using the log-linear, Haplin and EMIM approaches. To run these, note that you will need to install the R package Haplin and the command line package EMIM. For EMIM, you will need to provide the path to EMIM on your computer. The scripts also use the "system()" command within R to run EMIM. 
